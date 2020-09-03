@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Delivery List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>LandMark</th>
+                    <th>Feedback</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let class of class">
+                    <td>{{class.name}}</td>
+                    <td>{{class.address}}</td>
+                    <td>{{class.contact}}</td>
+                    <td>{{class.amount}}</td>
+                    <td>{{class.quantity}}</td>
+                    <td>
+                        <!-- <button (click)="EditClass(class.id)" class="btn btn-success">Edit</button> -->
+                        <button (click)="deleteClass(class.id)" class="btn btn-danger">Delete</button>
+                        <!-- <button (click)="classDetails(class.id)" class="btn btn-info" style="margin-left: 10px">Details</button> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<button (click)="DeliveryCheckClass()" class="btn btn-success">Delivery</button>

@@ -1,0 +1,40 @@
+<div class="cntct-style">
+    <h3>Delivery Details</h3>
+    <div [hidden]="submitted" style="width: 400px; margin-left: 6em; padding-top: 1em; font-weight: bold;">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="class.name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Address</label>
+                <input type="text" class="form-control" id="address" required [(ngModel)]="class.address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Contact</label>
+                <input type="text" class="form-control" id="contact" required [(ngModel)]="class.contact" name="contact">
+            </div>
+
+            <div class="form-group">
+                <label for="name">LandMark</label>
+                <input type="text" class="form-control" id="amount" required [(ngModel)]="class.amount" name="amount">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Feedback, if any</label>
+                <input type="text" class="form-control" id="quantity" required [(ngModel)]="class.quantity" name="quantity">
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <div [hidden]="!submitted">
+        <h4>
+
+        </h4>
+    </div>
+
+</div>

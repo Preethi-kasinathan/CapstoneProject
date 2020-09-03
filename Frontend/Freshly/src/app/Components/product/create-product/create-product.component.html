@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>BUY COMBO PRODUCTS</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Available Combo's</button>
+                    <div class="dropdown-content">
+                        <a href="#">Seed Package-SEED</a>
+                        <a href="#">Veg Combo - VG1</a>
+                        <a href="#">Fruit Combo - FC1</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbt">Upcoming</button>
+                    <div class="dropdown-content">
+                        <a href="#">GARDENING KIT- SC1</a>
+                        <a href="#">NV Spices Combo - VG1</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main_content">
+        <div class="info">
+            <div>
+                <h3>Buy Product</h3>
+                <div [hidden]="submitted" style="width: 400px; margin-left: 6em; padding-top: 1em; font-weight: bold;">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name">Combo Product Name</label>
+                            <input type="text" class="form-control" id="name" required [(ngModel)]="class.product" name="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Quantity</label>
+                            <input type="text" class="form-control" id="email" required [(ngModel)]="class.quantity" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Instructions,if any</label>
+                            <input type="text" class="form-control" id="message" required [(ngModel)]="class.price" name="message">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+
+                <div [hidden]="!submitted">
+                    <h4>You submitted successfully!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
